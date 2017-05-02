@@ -113,3 +113,22 @@ g3.append('g')
   .attr('d', chord)
   .attr('fill', function(d, i) { return colors[i%colors.length]; })
   .attr('stroke', function(d, i) { return colors[(i+1)%colors.length]; })
+
+var g4 = svg.append('g')
+    .attr('transform', 'translate('+(width/2)+','+(height/2)+')');
+
+  var moustache = [
+  {source: {x: 250, y: 100}, target: {x: 500, y: 90}},
+  {source: {x: 500, y: 90}, target: {x: 250, y: 120}},
+  {source: {x: 250, y: 120}, target: {x: 0, y: 90}},
+  {source: {x: 0, y: 90}, target: {x: 250, y: 100}},
+  {source: {x: 500, y: 90}, target: {x: 490, y: 80}},
+  {source: {x: 0, y: 90}, target: {x: 10, y: 80}}
+  ];
+
+g4.selectAll('path')
+  .data(moustache)
+  .enter()
+  .append('path')
+  .attr("d", d3.svg.diagonal())
+  .attr({stroke: 'black', fill: 'none'});

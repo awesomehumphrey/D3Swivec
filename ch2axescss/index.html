@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>D3 Practice</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .axis path,
+      .axis line {
+        fill: none;
+        stroke: black;
+        stroke-width: 1px;
+        shape-rendering: crispEdges;
+      }
+
+      .axis text{
+        font-size: 11px;
+      }
+
+      .axis.red line,
+      .axis.red path {
+        stroke: red;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div id="graph" class="span12"></div>
+      </div>
+    </div>
+  </body>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="code.js"></script>
+</html>
